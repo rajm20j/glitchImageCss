@@ -1,0 +1,195 @@
+body{
+  margin-top: 20%;
+  padding: 0;
+  background: #111111;
+  color: white;
+  font-family: sans-serif;
+  animation: backAnimation 8s linear infinite;
+}
+
+.mainLogo, .blueLogo, .redLogo{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1{
+  position: relative;
+  text-align: center;
+}
+
+
+h3{
+  text-align: center;
+}
+
+.logo{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  filter: blur(1px);
+}
+
+.mainLogo, .blueLogo,.redLogo{
+  position: absolute;
+  pointer-events: none;
+}
+
+.blueLogo{
+  animation: slowGlitch .3s linear infinite;
+}
+
+.redLogo{
+  animation: slowGlitch .3s linear reverse infinite;
+}
+
+.logo:hover{
+  filter: blur(1px);
+}
+
+.logo:hover .blueLogo{
+  animation: glitch .3s linear infinite;
+}
+
+.logo:hover .redLogo{
+  animation: glitch .3s linear reverse infinite;
+}
+
+.logo:active .blueLogo{
+  animation: onClickGlitch .3s linear infinite;
+}
+
+.logo:active .redLogo{
+  animation: onClickGlitch .3s linear reverse infinite;
+}
+
+.logo:active {
+  animation: onClickResize .3s linear reverse infinite;
+}
+
+@keyframes slowGlitch {
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translate(-2px, 2px);
+  }
+  40%{
+    transform: translate(-2px, -2px);
+  }
+  60%{
+    transform: translate(2px, 2px);
+  }
+  80%{
+    transform: translate(2px, -2px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch {
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translate(-3px, 3px);
+  }
+  40%{
+    transform: translate(-3px, -3px);
+  }
+  60%{
+    transform: translate(3px, 3px);
+  }
+  80%{
+    transform: translate(3px, -3px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+@keyframes onClickGlitch {
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translate(-6px, 6px);
+  }
+  40%{
+    transform: translate(-6px, -6px);
+  }
+  60%{
+    transform: translate(6px, 6px);
+  }
+  80%{
+    transform: translate(6px, -6px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+@keyframes onClickResize {
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    zoom:2;
+    filter: blur(2px);
+  }
+  40%{
+    zoom: 0.5;
+  }
+  60%{
+    zoom: 1.5;
+  }
+  80%{
+    zoom: 0.9;
+    filter: blur(3px);
+  }
+  100%{
+    zoom:1.2;
+  }
+}
+
+
+@keyframes backAnimation {
+  0%{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+  }
+  1%{
+    background-color: #111111;
+    opacity: 1;
+    color: white;
+  }
+  2%{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+  }
+  4%{
+    background-color: #111111;
+    opacity: 1;
+    color: white;
+  }
+  46.9%{
+    background-color: #111111;
+    opacity: 1;
+    color: white;
+  }
+  47%{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+  }
+  49%{
+    background-color: #111111;
+    opacity: 1;
+    color: white;
+  }
+}
+
